@@ -35,12 +35,16 @@ if( !class_exists( 'PPP_Facebook' ) ) {
 			}
 
 			ppp_set_social_tokens();
-
-			$this->facebook = new Facebook( array(
+			if (
+				defined( 'PPP_FB_APP_ID' ) &&
+				defined( 'PPP_FB_APP_SECRET' )
+			) {
+				$this->facebook = new Facebook( array(
 					'appId' => PPP_FB_APP_ID,
 					'secret' => PPP_FB_APP_SECRET,
 					'cookie' => true
-			));
+				));
+			}
 
 			return true;
 
