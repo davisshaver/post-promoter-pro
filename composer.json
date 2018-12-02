@@ -1,0 +1,5 @@
+{
+    "name": "davisshaver/post-promoter-pro",
+    "description": "Composer wrapper for plugin",
+    "type": "wordpress-plugin"
+}
